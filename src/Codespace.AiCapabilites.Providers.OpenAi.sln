@@ -8,6 +8,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N2.Capabilities", "N2.Capab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion", "AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion\AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.csproj", "{18E73A52-EB6C-4046-A013-DADE32CF8AAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.FunctionCalling", "AiCapabilities.Providers.OpenAi.Capabilities.FunctionCalling\AiCapabilities.Providers.OpenAi.Capabilities.FunctionCalling.csproj", "{8B4340C2-BE89-4FE4-9D04-D605DAA3BFD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{857043FC-2E93-4B8F-9DAD-F41BB100A7C4} = {78B73DF8-DE5D-4DC9-B950-984B99B7225A}
 		{18E73A52-EB6C-4046-A013-DADE32CF8AAE} = {38F6E061-6B24-425D-BDD7-0BD339AA175B}
+		{8B4340C2-BE89-4FE4-9D04-D605DAA3BFD2} = {38F6E061-6B24-425D-BDD7-0BD339AA175B}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{857043FC-2E93-4B8F-9DAD-F41BB100A7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -26,5 +29,9 @@ Global
 		{18E73A52-EB6C-4046-A013-DADE32CF8AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18E73A52-EB6C-4046-A013-DADE32CF8AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18E73A52-EB6C-4046-A013-DADE32CF8AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B4340C2-BE89-4FE4-9D04-D605DAA3BFD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B4340C2-BE89-4FE4-9D04-D605DAA3BFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B4340C2-BE89-4FE4-9D04-D605DAA3BFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B4340C2-BE89-4FE4-9D04-D605DAA3BFD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
