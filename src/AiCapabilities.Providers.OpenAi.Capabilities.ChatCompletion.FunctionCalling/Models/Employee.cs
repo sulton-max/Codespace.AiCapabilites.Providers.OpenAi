@@ -1,4 +1,4 @@
-namespace AiCapabilities.Providers.OpenAi.Capabilities.FunctionCalling.Models;
+namespace AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.FunctionCalling.Models;
 
 public class Employee
 {

@@ -1,6 +1,6 @@
-using AiCapabilities.Providers.OpenAi.Capabilities.FunctionCalling.Models;
+using AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.FunctionCalling.Models;
 
-namespace AiCapabilities.Providers.OpenAi.Capabilities.FunctionCalling.Services;
+namespace AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.FunctionCalling.Services;
 
 public class EmployeeService
 {
