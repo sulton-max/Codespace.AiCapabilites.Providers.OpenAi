@@ -36,6 +36,7 @@ var chatMessages = new List<ChatMessage>
                         """)
 };
 
+// Data extraction
 var chatCompletionOptions = new ChatCompletionOptions
 {
     ResponseFormat = ChatResponseFormat.CreateJsonSchemaFormat(
@@ -44,12 +45,24 @@ var chatCompletionOptions = new ChatCompletionOptions
         jsonSchema: BinaryData.FromString(generator.Generate(typeof(AbstractValueWrapper<Employee[]>)).ToString()))
 };
 
-var userMessage = new UserChatMessage("Parse employees");
-chatMessages.Add(userMessage);
+chatMessages.Add(new UserChatMessage("Parse employees"));
 
 var result = await chatCompletionClient.CompleteChatAsync(chatMessages, chatCompletionOptions);
 var employees = result.Value.Content.GetResult();
 var data = JsonConvert.DeserializeObject<AbstractValueWrapper<List<Employee>>>(employees);
 Console.WriteLine(JsonConvert.SerializeObject(data.Value));
 
-public record AbstractValueWrapper<T>(T Value);
+// Chain of thought extraction
+chatCompletionOptions = new ChatCompletionOptions
+{
+    ResponseFormat = ChatResponseFormat.CreateJsonSchemaFormat(
+        jsonSchemaFormatName: $"{nameof(ActionSteps)}s",
+        jsonSchemaFormatDescription: "Action steps list",
+        jsonSchema: BinaryData.FromString(generator.Generate(typeof(AbstractValueWrapper<ActionSteps[]>)).ToString()))
+};
+
+chatMessages.Add(new UserChatMessage("Generate specific steps to prepare for IELTS english assessments, you can include specific materials names"));
+
+result = await chatCompletionClient.CompleteChatAsync(chatMessages, chatCompletionOptions);
+var actionSteps = JsonConvert.DeserializeObject<AbstractValueWrapper<List<ActionSteps>>>(result.Value.Content.GetResult());
+Console.WriteLine(JsonConvert.SerializeObject(actionSteps.Value));
