@@ -1,4 +1,4 @@
-﻿using AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.StructuredOutputs.Models;
+﻿using AiCapabilities.Providers.OpenAi.Capabilities.ImageGeneration.Models;
 using Microsoft.Extensions.Configuration;
 using OpenAI;
 using OpenAI.Images;
