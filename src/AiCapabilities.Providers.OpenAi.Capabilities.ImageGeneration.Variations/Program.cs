@@ -45,7 +45,6 @@ await Task.WhenAll(imagesA.Select(async image =>
     newFileStream.Close();
 }));
 
-// Generate one new variation based on an image
 // TODO : Image upload isn't working
 var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "Assets", "cat.png");
 var inputImage = File.OpenRead(imagePath);
@@ -59,6 +58,7 @@ var variationOptions = new ImageVariationOptions
     ResponseFormat = GeneratedImageFormat.Bytes,
 };
 
+// Generate one new variation based on an image
 var resultB = await imageGenerationClient.GenerateImageVariationAsync(inputImage, "cat.png", variationOptions);
 var binaryData = resultB.Value.ImageBytes;
 
