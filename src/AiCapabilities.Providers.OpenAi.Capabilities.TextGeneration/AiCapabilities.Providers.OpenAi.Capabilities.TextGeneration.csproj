@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <UserSecretsId>677bf560-6bf7-40e5-8ceb-11ac1cf0db56</UserSecretsId>
+        <RootNamespace>AiCapabilities.Providers.OpenAi.Capabilities.TextGeneration</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

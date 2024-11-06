@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
-using AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.FunctionCalling.Extensions;
-using AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.FunctionCalling.Models;
-using AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.FunctionCalling.Services;
+using AiCapabilities.Providers.OpenAi.Guides.FunctionCalling.Extensions;
+using AiCapabilities.Providers.OpenAi.Guides.FunctionCalling.Models;
+using AiCapabilities.Providers.OpenAi.Guides.FunctionCalling.Services;
 using Microsoft.Extensions.Configuration;
 using OpenAI;
 using OpenAI.Chat;

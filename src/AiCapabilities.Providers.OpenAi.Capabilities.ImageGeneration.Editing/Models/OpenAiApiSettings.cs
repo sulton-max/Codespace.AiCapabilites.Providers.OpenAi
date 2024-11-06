@@ -1,4 +1,4 @@
-namespace AiCapabilities.Providers.OpenAi.Capabilities.ImageGeneration.ImagesQuality.Models;
+namespace AiCapabilities.Providers.OpenAi.Capabilities.ImageGeneration.Editing.Models;
 
 public sealed class OpenAiApiSettings
 {

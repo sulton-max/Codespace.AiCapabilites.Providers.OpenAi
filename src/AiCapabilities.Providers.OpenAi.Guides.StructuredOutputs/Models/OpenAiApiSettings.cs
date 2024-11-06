@@ -1,4 +1,4 @@
-namespace AiCapabilities.Providers.OpenAi.Capabilities.ImageGeneration.Variations.Models;
+namespace AiCapabilities.Providers.OpenAi.Guides.StructuredOutputs.Models;
 
 public sealed class OpenAiApiSettings
 {

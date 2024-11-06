@@ -1,4 +1,4 @@
-﻿using AiCapabilities.Providers.OpenAi.Capabilities.ImageGeneration.ImagesQuality.Models;
+﻿using AiCapabilities.Providers.OpenAi.Capabilities.ImageGeneration.Variations.Models;
 using Microsoft.Extensions.Configuration;
 using OpenAI;
 using OpenAI.Images;

@@ -1,4 +1,4 @@
-namespace AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.StructuredOutputs.Models;
+namespace AiCapabilities.Providers.OpenAi.Guides.StructuredOutputs.Models;
 
 public class Employee
 {

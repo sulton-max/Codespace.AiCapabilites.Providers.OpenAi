@@ -1,4 +1,4 @@
-﻿using AiCapabilities.Providers.OpenAi.Capabilities.ImageGeneration.ImagesQuality.Models;
+﻿using AiCapabilities.Providers.OpenAi.Capabilities.ImageGeneration.Editing.Models;
 using Microsoft.Extensions.Configuration;
 using OpenAI;
 using OpenAI.Images;
@@ -46,25 +46,8 @@ var editOptions = new ImageEditOptions
 //
 // resultAImageStream.Close();
 // newFileAStream.Close();
-
-// Generate a single image edit with a mask
-originalImage.Seek(0, SeekOrigin.Begin);
-maskImage.Seek(0, SeekOrigin.Begin);
-
-var resultB = await imageGenerationClient.GenerateImageEditAsync(originalImage, originalImageName, prompt, maskImage, maskImageName, editOptions);
-
-var resultBImageStream = resultB.Value.ImageBytes.ToStream();
-var variationB = Path.Combine(imagesPath, "VariationB");
-if (!Directory.Exists(variationB)) Directory.CreateDirectory(variationB);
-var newFileBStream = File.OpenWrite(Path.Combine(variationB, Path.ChangeExtension(Guid.NewGuid().ToString(), "png")));
-
-await resultBImageStream.CopyToAsync(newFileBStream);
-await resultBImageStream.FlushAsync();
-
-resultBImageStream.Close();
-newFileBStream.Close();
-
-// Generate multiple image edit variants without a mask   
+//
+// // Generate multiple image edit variants without a mask   
 // originalImage.Position = 0;
 //
 // var resultC = await imageGenerationClient.GenerateImageEditsAsync(originalImage, originalImageName, prompt, 2, editOptions);
@@ -84,6 +67,23 @@ newFileBStream.Close();
 //     imageStream.Close();
 //     fileStream.Close();
 // }));
+
+// Generate a single image edit with a mask
+originalImage.Seek(0, SeekOrigin.Begin);
+maskImage.Seek(0, SeekOrigin.Begin);
+
+var resultB = await imageGenerationClient.GenerateImageEditAsync(originalImage, originalImageName, prompt, maskImage, maskImageName, editOptions);
+
+var resultBImageStream = resultB.Value.ImageBytes.ToStream();
+var variationB = Path.Combine(imagesPath, "VariationB");
+if (!Directory.Exists(variationB)) Directory.CreateDirectory(variationB);
+var newFileBStream = File.OpenWrite(Path.Combine(variationB, Path.ChangeExtension(Guid.NewGuid().ToString(), "png")));
+
+await resultBImageStream.CopyToAsync(newFileBStream);
+await resultBImageStream.FlushAsync();
+
+resultBImageStream.Close();
+newFileBStream.Close();
 
 // Generate multiple image edit variants with mask   
 originalImage.Seek(0, SeekOrigin.Begin);

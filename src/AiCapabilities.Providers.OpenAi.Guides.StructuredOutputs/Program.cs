@@ -1,5 +1,5 @@
-﻿using AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.StructuredOutputs.Extensions;
-using AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.StructuredOutputs.Models;
+﻿using AiCapabilities.Providers.OpenAi.Guides.StructuredOutputs.Extensions;
+using AiCapabilities.Providers.OpenAi.Guides.StructuredOutputs.Models;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Schema.Generation;

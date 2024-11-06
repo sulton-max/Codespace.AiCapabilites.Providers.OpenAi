@@ -1,4 +1,4 @@
-namespace AiCapabilities.Providers.OpenAi.Capabilities.ChatCompletion.Models;
+namespace AiCapabilities.Providers.OpenAi.Capabilities.TextGeneration.Models;
 
 public sealed class OpenAiApiSettings
 {
