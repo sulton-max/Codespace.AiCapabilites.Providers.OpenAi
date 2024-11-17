@@ -28,7 +28,7 @@ var maskImage = new MemoryStream(await File.ReadAllBytesAsync(Path.Combine(asset
 var editOptions = new ImageEditOptions
 {
     Size = GeneratedImageSize.W1024xH1024,
-    ResponseFormat = GeneratedImageFormat.Bytes,
+    ResponseFormat = GeneratedImageFormat.Bytes
 };
 
 // Generate a single image edit without a mask

@@ -1,10 +1,11 @@
-﻿using AiCapabilities.Providers.OpenAi.Guides.StructuredOutputs.Extensions;
-using AiCapabilities.Providers.OpenAi.Guides.StructuredOutputs.Models;
+﻿using AiCapabilities.Providers.OpenAi.Guides.StructuredOutputs.Models;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Schema.Generation;
 using OpenAI;
 using OpenAI.Chat;
+using Shared.Extensions;
+using Shared.Models;
 
 // Create configuration builder
 var configuration = new ConfigurationBuilder()
@@ -40,7 +41,7 @@ var chatMessages = new List<ChatMessage>
 var chatCompletionOptions = new ChatCompletionOptions
 {
     ResponseFormat = ChatResponseFormat.CreateJsonSchemaFormat(
-        jsonSchemaFormatName: $"{nameof(Employee)}s",
+        $"{nameof(Employee)}s",
         jsonSchemaFormatDescription: "Employees list",
         jsonSchema: BinaryData.FromString(generator.Generate(typeof(AbstractValueWrapper<Employee[]>)).ToString()))
 };
@@ -56,7 +57,7 @@ Console.WriteLine(JsonConvert.SerializeObject(data.Value));
 chatCompletionOptions = new ChatCompletionOptions
 {
     ResponseFormat = ChatResponseFormat.CreateJsonSchemaFormat(
-        jsonSchemaFormatName: $"{nameof(ActionSteps)}s",
+        $"{nameof(ActionSteps)}s",
         jsonSchemaFormatDescription: "Action steps list",
         jsonSchema: BinaryData.FromString(generator.Generate(typeof(AbstractValueWrapper<ActionSteps[]>)).ToString()))
 };
@@ -71,7 +72,7 @@ Console.WriteLine(JsonConvert.SerializeObject(actionSteps.Value));
 chatCompletionOptions = new ChatCompletionOptions
 {
     ResponseFormat = ChatResponseFormat.CreateJsonSchemaFormat(
-        jsonSchemaFormatName: $"{nameof(ActionSteps)}s",
+        $"{nameof(ActionSteps)}s",
         jsonSchemaFormatDescription: "Action steps list",
         jsonSchema: BinaryData.FromString(generator.Generate(typeof(AbstractValueWrapper<ActionSteps[]>)).ToString()))
 };
@@ -85,7 +86,9 @@ chatMessages =
 result = await chatCompletionClient.CompleteChatAsync(chatMessages, chatCompletionOptions);
 
 if (result.Value.Refusal is not null)
+{
     Console.WriteLine(result.Value.Refusal);
+}
 else
 {
     actionSteps = JsonConvert.DeserializeObject<AbstractValueWrapper<List<ActionSteps>>>(result.Value.Content.GetResult())!;

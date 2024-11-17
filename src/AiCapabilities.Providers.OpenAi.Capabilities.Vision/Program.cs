@@ -1,5 +1,5 @@
-﻿using AiCapabilities.Providers.OpenAi.Capabilities.TextGeneration.Extensions;
-using AiCapabilities.Providers.OpenAi.Capabilities.TextGeneration.Models;
+﻿using AiCapabilities.Providers.OpenAi.Capabilities.Vision.Extensions;
+using AiCapabilities.Providers.OpenAi.Capabilities.Vision.Models;
 using Microsoft.Extensions.Configuration;
 using OpenAI.Chat;
 

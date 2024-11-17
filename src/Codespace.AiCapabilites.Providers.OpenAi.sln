@@ -56,6 +56,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "N3.G7.BatchApi", "N3.G7.Bat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.Vision", "AiCapabilities.Providers.OpenAi.Capabilities.Vision\AiCapabilities.Providers.OpenAi.Capabilities.Vision.csproj", "{02FC5D13-AAA2-467F-921D-E1C390F35F50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.AudioGeneration", "AiCapabilities.Providers.OpenAi.Capabilities.AudioGeneration\AiCapabilities.Providers.OpenAi.Capabilities.AudioGeneration.csproj", "{3A016386-DA01-474B-8C26-EB130BC35738}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{2457744F-CE89-4809-8F0B-6E9CEBC12C0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech", "AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech\AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech.csproj", "{CFB05A82-DE52-47E6-ADA6-C1AD3B03A860}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech.QualitySpeech", "AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech.QualitySpeech\AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech.QualitySpeech.csproj", "{DB12807F-053E-40D4-A11E-04DD635A83FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech.Streaming", "AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech.Streaming\AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech.Streaming.csproj", "{1646727E-3817-4468-AD87-CBA0B669396D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +97,10 @@ Global
 		{DE48AA2A-A050-4658-9127-66CED4F4D39F} = {1CA32140-2484-4259-B84C-3F5B9B23B2B6}
 		{0B6ACE64-2D5A-4F06-9CAD-53567BAE11E5} = {1CA32140-2484-4259-B84C-3F5B9B23B2B6}
 		{02FC5D13-AAA2-467F-921D-E1C390F35F50} = {CCFB11D1-A898-4960-BDCD-99D8C81EDE24}
+		{3A016386-DA01-474B-8C26-EB130BC35738} = {3904382C-07DC-4B67-BFE3-C21CE1EDB7E4}
+		{CFB05A82-DE52-47E6-ADA6-C1AD3B03A860} = {E89BF224-9DBD-48B2-A354-4F3ACACE4BAE}
+		{DB12807F-053E-40D4-A11E-04DD635A83FF} = {E89BF224-9DBD-48B2-A354-4F3ACACE4BAE}
+		{1646727E-3817-4468-AD87-CBA0B669396D} = {E89BF224-9DBD-48B2-A354-4F3ACACE4BAE}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{857043FC-2E93-4B8F-9DAD-F41BB100A7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -125,5 +139,25 @@ Global
 		{02FC5D13-AAA2-467F-921D-E1C390F35F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02FC5D13-AAA2-467F-921D-E1C390F35F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02FC5D13-AAA2-467F-921D-E1C390F35F50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A016386-DA01-474B-8C26-EB130BC35738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A016386-DA01-474B-8C26-EB130BC35738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A016386-DA01-474B-8C26-EB130BC35738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A016386-DA01-474B-8C26-EB130BC35738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2457744F-CE89-4809-8F0B-6E9CEBC12C0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2457744F-CE89-4809-8F0B-6E9CEBC12C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2457744F-CE89-4809-8F0B-6E9CEBC12C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2457744F-CE89-4809-8F0B-6E9CEBC12C0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB05A82-DE52-47E6-ADA6-C1AD3B03A860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB05A82-DE52-47E6-ADA6-C1AD3B03A860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB05A82-DE52-47E6-ADA6-C1AD3B03A860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB05A82-DE52-47E6-ADA6-C1AD3B03A860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB12807F-053E-40D4-A11E-04DD635A83FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB12807F-053E-40D4-A11E-04DD635A83FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB12807F-053E-40D4-A11E-04DD635A83FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB12807F-053E-40D4-A11E-04DD635A83FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1646727E-3817-4468-AD87-CBA0B669396D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1646727E-3817-4468-AD87-CBA0B669396D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1646727E-3817-4468-AD87-CBA0B669396D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1646727E-3817-4468-AD87-CBA0B669396D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

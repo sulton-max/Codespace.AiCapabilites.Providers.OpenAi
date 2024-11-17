@@ -1,7 +1,7 @@
 using System.Text;
 using OpenAI.Chat;
 
-namespace AiCapabilities.Providers.OpenAi.Guides.StructuredOutputs.Extensions;
+namespace AiCapabilities.Providers.OpenAi.Capabilities.AudioGeneration.Extensions;
 
 public static class OpenAiIntegrationExtensions
 {

@@ -1,7 +1,7 @@
-﻿using AiCapabilities.Providers.OpenAi.Capabilities.TextGeneration.Extensions;
-using AiCapabilities.Providers.OpenAi.Capabilities.TextGeneration.Models;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using OpenAI.Chat;
+using Shared.Extensions;
+using Shared.Models;
 
 // Create configuration builder
 var configuration = new ConfigurationBuilder()

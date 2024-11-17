@@ -23,7 +23,7 @@ var options = new ImageGenerationOptions
     Quality = GeneratedImageQuality.High,
     Size = GeneratedImageSize.W512xH512,
     Style = GeneratedImageStyle.Vivid,
-    ResponseFormat = GeneratedImageFormat.Bytes,
+    ResponseFormat = GeneratedImageFormat.Bytes
 };
 
 // Generating multiple variations based on a prompt
@@ -55,7 +55,7 @@ await inputImage.ReadAsync(buffer, 0, (int)inputImage.Length);
 var variationOptions = new ImageVariationOptions
 {
     Size = GeneratedImageSize.W512xH512,
-    ResponseFormat = GeneratedImageFormat.Bytes,
+    ResponseFormat = GeneratedImageFormat.Bytes
 };
 
 // Generate one new variation based on an image

@@ -1,7 +1,7 @@
 using System.Text;
 using OpenAI.Chat;
 
-namespace AiCapabilities.Providers.OpenAi.Capabilities.TextGeneration.Extensions;
+namespace Shared.Extensions;
 
 public static class OpenAiIntegrationExtensions
 {

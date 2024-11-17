@@ -1,10 +1,10 @@
 ﻿using System.Text.Json;
-using AiCapabilities.Providers.OpenAi.Guides.FunctionCalling.Extensions;
-using AiCapabilities.Providers.OpenAi.Guides.FunctionCalling.Models;
 using AiCapabilities.Providers.OpenAi.Guides.FunctionCalling.Services;
 using Microsoft.Extensions.Configuration;
 using OpenAI;
 using OpenAI.Chat;
+using Shared.Extensions;
+using Shared.Models;
 
 // Create configuration builder
 var configuration = new ConfigurationBuilder()
@@ -17,7 +17,7 @@ configuration.GetSection(nameof(OpenAiApiSettings)).Bind(openAiApiSettings);
 
 var openAiClient = new OpenAIClient(openAiApiSettings.ApiKey);
 var chatCompletionClient = openAiClient.GetChatClient("gpt-4o-mini");
-var chatMessages = new List<ChatMessage>()
+var chatMessages = new List<ChatMessage>
 {
     new SystemChatMessage("You're helpful assistant as part of company dashboard.")
 };
@@ -26,9 +26,9 @@ var employeeService = new EmployeeService();
 var tools = new List<ChatTool>
 {
     ChatTool.CreateFunctionTool(
-        functionName: nameof(EmployeeService.GetById),
-        functionDescription: "Gets an employee by their unique ID, may return null if not found.",
-        functionParameters: BinaryData.FromString(
+        nameof(EmployeeService.GetById),
+        "Gets an employee by their unique ID, may return null if not found.",
+        BinaryData.FromString(
             """
             {
                 "type": "object",
@@ -40,11 +40,11 @@ var tools = new List<ChatTool>
                 }
             }
             """),
-        functionSchemaIsStrict: true),
+        true),
     ChatTool.CreateFunctionTool(
-        functionName: nameof(EmployeeService.GetByName),
-        functionDescription: "Gets an employee by their first and last name, may return null if not found.",
-        functionParameters: BinaryData.FromString(
+        nameof(EmployeeService.GetByName),
+        "Gets an employee by their first and last name, may return null if not found.",
+        BinaryData.FromString(
             """
             {
                 "type": "object",
@@ -60,12 +60,12 @@ var tools = new List<ChatTool>
                 }
             }
             """),
-        functionSchemaIsStrict: true)
+        true)
 };
 
 var chatCompletionOptions = new ChatCompletionOptions
 {
-    ParallelToolCallsEnabled = true,
+    AllowParallelToolCalls = true
 };
 tools.ForEach(tool => chatCompletionOptions.Tools.Add(tool));
 

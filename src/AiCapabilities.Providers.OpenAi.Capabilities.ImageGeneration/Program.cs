@@ -1,7 +1,7 @@
-﻿using AiCapabilities.Providers.OpenAi.Capabilities.ImageGeneration.Models;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using OpenAI;
 using OpenAI.Images;
+using Shared.Models;
 
 // Create configuration builder
 var configuration = new ConfigurationBuilder()

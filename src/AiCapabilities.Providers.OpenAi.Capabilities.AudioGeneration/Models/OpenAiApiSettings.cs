@@ -1,4 +1,4 @@
-namespace AiCapabilities.Providers.OpenAi.Capabilities.ImageGeneration.Models;
+namespace AiCapabilities.Providers.OpenAi.Capabilities.AudioGeneration.Models;
 
 public sealed class OpenAiApiSettings
 {

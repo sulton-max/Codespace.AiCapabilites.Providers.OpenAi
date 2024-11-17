@@ -1,4 +1,4 @@
-namespace AiCapabilities.Providers.OpenAi.Capabilities.TextGeneration.Models;
+namespace AiCapabilities.Providers.OpenAi.Capabilities.Vision.Models;
 
 public sealed class OpenAiApiSettings
 {
