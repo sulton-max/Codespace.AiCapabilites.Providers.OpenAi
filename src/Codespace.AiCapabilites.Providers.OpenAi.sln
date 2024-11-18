@@ -70,6 +70,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.Op
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.Formats", "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.Formats\AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.Formats.csproj", "{07293955-3336-48AB-9164-9DBDED8A8434}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.Prompts", "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.Prompts\AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.Prompts.csproj", "{1C111FDD-30AB-4F58-AB91-AEC8C6C04DD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.PostProcessing", "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.PostProcessing\AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.PostProcessing.csproj", "{5F99464A-1372-4D94-AAA3-DB28237F19DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +111,8 @@ Global
 		{1646727E-3817-4468-AD87-CBA0B669396D} = {E89BF224-9DBD-48B2-A354-4F3ACACE4BAE}
 		{07AE1107-BBF2-45D1-8E2C-9F723292DC4E} = {4EED77C5-5988-4BFD-91EA-6D69E11A1E16}
 		{07293955-3336-48AB-9164-9DBDED8A8434} = {4EED77C5-5988-4BFD-91EA-6D69E11A1E16}
+		{1C111FDD-30AB-4F58-AB91-AEC8C6C04DD7} = {4EED77C5-5988-4BFD-91EA-6D69E11A1E16}
+		{5F99464A-1372-4D94-AAA3-DB28237F19DF} = {4EED77C5-5988-4BFD-91EA-6D69E11A1E16}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{857043FC-2E93-4B8F-9DAD-F41BB100A7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -173,5 +179,13 @@ Global
 		{07293955-3336-48AB-9164-9DBDED8A8434}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07293955-3336-48AB-9164-9DBDED8A8434}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07293955-3336-48AB-9164-9DBDED8A8434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C111FDD-30AB-4F58-AB91-AEC8C6C04DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C111FDD-30AB-4F58-AB91-AEC8C6C04DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C111FDD-30AB-4F58-AB91-AEC8C6C04DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C111FDD-30AB-4F58-AB91-AEC8C6C04DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F99464A-1372-4D94-AAA3-DB28237F19DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F99464A-1372-4D94-AAA3-DB28237F19DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F99464A-1372-4D94-AAA3-DB28237F19DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F99464A-1372-4D94-AAA3-DB28237F19DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

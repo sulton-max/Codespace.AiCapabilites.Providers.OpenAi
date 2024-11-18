@@ -31,7 +31,7 @@ var transcriptionOptions = new AudioTranscriptionOptions
     Temperature = 0,
     Language = "en",
     ResponseFormat = AudioTranscriptionFormat.Verbose,
-    TimestampGranularities = AudioTimestampGranularities.Word
+    TimestampGranularities = AudioTimestampGranularities.Segment | AudioTimestampGranularities.Word
 };
 
 var responseB = await audioGenerationClient.TranscribeAudioAsync(File.OpenRead(audioFilePath), Path.GetFileName(audioFilePath), transcriptionOptions);

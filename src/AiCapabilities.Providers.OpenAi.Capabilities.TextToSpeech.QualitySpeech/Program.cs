@@ -28,7 +28,7 @@ var speechFilesPath = Path.Combine(projectDirectory, "Speech");
 if (!Directory.Exists(speechFilesPath)) Directory.CreateDirectory(speechFilesPath);
 
 // Speech generation with HD quality
-var text = "We need to buy apples, oranges, bananas, and grapes.";
+var text = "We need to buy 3 apples, 2 oranges, bananas, and a kilo of grapes.";
 var response = await audioGenerationClient.GenerateSpeechAsync(text, voiceOptions, speechGenerationOptions);
 
 var audioStream = response.Value.ToStream();
