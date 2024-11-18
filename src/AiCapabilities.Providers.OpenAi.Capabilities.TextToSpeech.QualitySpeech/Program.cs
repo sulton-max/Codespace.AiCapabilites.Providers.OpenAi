@@ -28,7 +28,7 @@ var speechFilesPath = Path.Combine(projectDirectory, "Speech");
 if (!Directory.Exists(speechFilesPath)) Directory.CreateDirectory(speechFilesPath);
 
 // Speech generation with HD quality
-var text = "0 days since the last AI news and 0 hours since last JS framework )";
+var text = "We need to buy apples, oranges, bananas, and grapes.";
 var response = await audioGenerationClient.GenerateSpeechAsync(text, voiceOptions, speechGenerationOptions);
 
 var audioStream = response.Value.ToStream();

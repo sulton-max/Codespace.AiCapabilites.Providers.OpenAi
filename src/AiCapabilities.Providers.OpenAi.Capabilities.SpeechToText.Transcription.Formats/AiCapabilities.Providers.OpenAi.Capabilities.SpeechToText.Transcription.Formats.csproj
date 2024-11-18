@@ -5,15 +5,11 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <UserSecretsId>8d74e641-ba37-4097-b704-f404e8777774</UserSecretsId>
+        <UserSecretsId>ebed498e-8890-41ea-8082-3ca4a472eeb1</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Shared\Shared.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Speech\" />
     </ItemGroup>
 
 </Project>
