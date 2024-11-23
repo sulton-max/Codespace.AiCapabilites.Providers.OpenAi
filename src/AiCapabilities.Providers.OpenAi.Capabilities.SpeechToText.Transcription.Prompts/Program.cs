@@ -15,8 +15,7 @@ configuration.GetSection(nameof(OpenAiApiSettings)).Bind(openAiApiSettings);
 
 // Create an audio generation client
 var openAiClient = new OpenAIClient(openAiApiSettings.ApiKey);
-var audioGenerationClient = openAiClient.GetAudioClient("whisper-1");
-var chatClient = openAiClient.GetChatClient("gpt-4o-mini");
+var audioClient = openAiClient.GetAudioClient("whisper-1");
 
 // Get an audio file
 var projectDirectory = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..");
@@ -30,5 +29,5 @@ var transcriptionOptionsA = new AudioTranscriptionOptions
     Prompt = "3 bags, 4 books."
 };
 
-var response = await audioGenerationClient.TranscribeAudioAsync(File.OpenRead(audioFilePath), Path.GetFileName(audioFilePath), transcriptionOptionsA);
+var response = await audioClient.TranscribeAudioAsync(File.OpenRead(audioFilePath), Path.GetFileName(audioFilePath), transcriptionOptionsA);
 Console.WriteLine($"Transcription: {response.Value.Text}");

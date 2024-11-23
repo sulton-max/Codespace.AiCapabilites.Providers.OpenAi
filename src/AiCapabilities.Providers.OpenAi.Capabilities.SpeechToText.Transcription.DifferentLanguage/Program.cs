@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using OpenAI;
-using OpenAI.Chat;
-using Shared.Extensions;
+using OpenAI.Audio;
 using Shared.Models;
 
 // Create configuration builder
@@ -16,24 +15,19 @@ configuration.GetSection(nameof(OpenAiApiSettings)).Bind(openAiApiSettings);
 // Create an audio generation client
 var openAiClient = new OpenAIClient(openAiApiSettings.ApiKey);
 var audioClient = openAiClient.GetAudioClient("whisper-1");
-var chatClient = openAiClient.GetChatClient("gpt-4o-mini");
 
 // Get an audio file
 var projectDirectory = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..");
 var audioFilesPath = Path.Combine(projectDirectory, "Speech");
 var audioFilePath = Directory.GetFiles(audioFilesPath, "*.mp3").First();
 
-// Post-processing with GPT
-var response = await audioClient.TranscribeAudioAsync(File.OpenRead(audioFilePath), Path.GetFileName(audioFilePath));
-var chatMessages = new List<ChatMessage>
+// Simple transaction of an audio with different language
+var transcriptionOptions = new AudioTranscriptionOptions
 {
-    new SystemChatMessage(
-        """
-        You're helpful assistant. Your task is to correct any spelling discrepancies in the given text. Make sure following product names are spelled 
-        correctly - ZentriQix, Digique Plus, CynapseFive, and VortiQore V8.
-        """),
-    new UserChatMessage(response.Value.Text)
+    Temperature = 0,
+    Language = "ru",
+    ResponseFormat = AudioTranscriptionFormat.Simple
 };
 
-var result = await chatClient.CompleteChatAsync(chatMessages);
-Console.WriteLine($"Transcription: {result.Value.Content.GetResult()}");
+var response = await audioClient.TranscribeAudioAsync(File.OpenRead(audioFilePath), Path.GetFileName(audioFilePath), transcriptionOptions);
+Console.WriteLine($"Transcription: {response.Value.Text}");

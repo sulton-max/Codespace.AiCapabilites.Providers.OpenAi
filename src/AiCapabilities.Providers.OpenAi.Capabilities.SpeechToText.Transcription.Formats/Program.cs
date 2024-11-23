@@ -14,13 +14,12 @@ configuration.GetSection(nameof(OpenAiApiSettings)).Bind(openAiApiSettings);
 
 // Create an audio generation client
 var openAiClient = new OpenAIClient(openAiApiSettings.ApiKey);
-var audioGenerationClient = openAiClient.GetAudioClient("whisper-1");
+var audioClient = openAiClient.GetAudioClient("whisper-1");
 
 // Get an audio file
 var projectDirectory = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..");
 var audioFilesPath = Path.Combine(projectDirectory, "Speech");
 var audioFilePath = Directory.GetFiles(audioFilesPath, "*.mp3").First();
-var audioStream = File.OpenRead(audioFilePath);
 
 // VTT transcription
 var transcriptionOptionsA = new AudioTranscriptionOptions
@@ -28,7 +27,7 @@ var transcriptionOptionsA = new AudioTranscriptionOptions
     ResponseFormat = AudioTranscriptionFormat.Vtt,
 };
 
-var responseA = await audioGenerationClient.TranscribeAudioAsync(
+var responseA = await audioClient.TranscribeAudioAsync(
     File.OpenRead(audioFilePath), 
     Path.GetFileName(audioFilePath), 
     transcriptionOptionsA);
@@ -40,7 +39,7 @@ var transcriptionOptionsB = new AudioTranscriptionOptions
     ResponseFormat = AudioTranscriptionFormat.Srt,
 };
 
-var responseB = await audioGenerationClient.TranscribeAudioAsync(
+var responseB = await audioClient.TranscribeAudioAsync(
     File.OpenRead(audioFilePath), 
     Path.GetFileName(audioFilePath), 
     transcriptionOptionsB);

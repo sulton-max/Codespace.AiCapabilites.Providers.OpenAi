@@ -74,6 +74,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.Op
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.PostProcessing", "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.PostProcessing\AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.PostProcessing.csproj", "{5F99464A-1372-4D94-AAA3-DB28237F19DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Translations", "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Translations\AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Translations.csproj", "{440121C2-096A-4902-A479-0CA816C0CFEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech.DifferentLanguage", "AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech.DifferentLanguage\AiCapabilities.Providers.OpenAi.Capabilities.TextToSpeech.DifferentLanguage.csproj", "{544FEC13-1728-40BF-ADE3-BF00E36274A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.DifferentLanguage", "AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.DifferentLanguage\AiCapabilities.Providers.OpenAi.Capabilities.SpeechToText.Transcription.DifferentLanguage.csproj", "{4BE75043-32EE-4987-8977-3A984DB9988C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +119,9 @@ Global
 		{07293955-3336-48AB-9164-9DBDED8A8434} = {4EED77C5-5988-4BFD-91EA-6D69E11A1E16}
 		{1C111FDD-30AB-4F58-AB91-AEC8C6C04DD7} = {4EED77C5-5988-4BFD-91EA-6D69E11A1E16}
 		{5F99464A-1372-4D94-AAA3-DB28237F19DF} = {4EED77C5-5988-4BFD-91EA-6D69E11A1E16}
+		{440121C2-096A-4902-A479-0CA816C0CFEC} = {4EED77C5-5988-4BFD-91EA-6D69E11A1E16}
+		{544FEC13-1728-40BF-ADE3-BF00E36274A7} = {E89BF224-9DBD-48B2-A354-4F3ACACE4BAE}
+		{4BE75043-32EE-4987-8977-3A984DB9988C} = {4EED77C5-5988-4BFD-91EA-6D69E11A1E16}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{857043FC-2E93-4B8F-9DAD-F41BB100A7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -187,5 +196,17 @@ Global
 		{5F99464A-1372-4D94-AAA3-DB28237F19DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F99464A-1372-4D94-AAA3-DB28237F19DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F99464A-1372-4D94-AAA3-DB28237F19DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440121C2-096A-4902-A479-0CA816C0CFEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440121C2-096A-4902-A479-0CA816C0CFEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440121C2-096A-4902-A479-0CA816C0CFEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440121C2-096A-4902-A479-0CA816C0CFEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{544FEC13-1728-40BF-ADE3-BF00E36274A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{544FEC13-1728-40BF-ADE3-BF00E36274A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{544FEC13-1728-40BF-ADE3-BF00E36274A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{544FEC13-1728-40BF-ADE3-BF00E36274A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BE75043-32EE-4987-8977-3A984DB9988C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE75043-32EE-4987-8977-3A984DB9988C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE75043-32EE-4987-8977-3A984DB9988C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE75043-32EE-4987-8977-3A984DB9988C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
