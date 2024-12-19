@@ -5,11 +5,11 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <UserSecretsId>0e2948ac-a62b-4aa2-8c6b-d9ef6fede7d2</UserSecretsId>
+        <UserSecretsId>ad9d46c0-d487-493b-aead-098aa079149e</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Shared\Shared.csproj" />
+        <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
 
 </Project>
