@@ -1,4 +1,4 @@
-﻿using AiCapabilities.Providers.OpenAi.Capabilities.Embeddings.FeatureEncoding.Extensions;
+﻿using AiCapabilities.Providers.OpenAi.Capabilities.Embeddings.Usages.FeatureEncoding.Extensions;
 using Microsoft.Extensions.Configuration;
 using OpenAI;
 using Shared.Models;

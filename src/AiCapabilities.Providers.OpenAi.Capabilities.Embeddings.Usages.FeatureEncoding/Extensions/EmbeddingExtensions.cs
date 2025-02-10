@@ -1,4 +1,4 @@
-namespace AiCapabilities.Providers.OpenAi.Capabilities.Embeddings.FeatureEncoding.Extensions;
+namespace AiCapabilities.Providers.OpenAi.Capabilities.Embeddings.Usages.FeatureEncoding.Extensions;
 
 public static class EmbeddingExtensions
 {
