@@ -90,6 +90,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.Op
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.Embeddings.Clustering", "AiCapabilities.Providers.OpenAi.Capabilities.Embeddings.Clustering\AiCapabilities.Providers.OpenAi.Capabilities.Embeddings.Clustering.csproj", "{E45E360E-0514-453B-B64B-69D02EAAE59B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCapabilities.Providers.OpenAi.Capabilities.Moderation", "AiCapabilities.Providers.OpenAi.Capabilities.Moderation\AiCapabilities.Providers.OpenAi.Capabilities.Moderation.csproj", "{0DA98071-C17D-43D2-855F-B893E75630A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +139,7 @@ Global
 		{D9425E23-01AA-4A41-8F37-8F6C9E087F4D} = {E9F75F61-319F-4CF9-8E37-207959244D0E}
 		{2FE1081B-624F-4E3F-8B64-ACD6C34F3D37} = {E9F75F61-319F-4CF9-8E37-207959244D0E}
 		{E45E360E-0514-453B-B64B-69D02EAAE59B} = {E9F75F61-319F-4CF9-8E37-207959244D0E}
+		{0DA98071-C17D-43D2-855F-B893E75630A3} = {544A4D56-9B40-483A-A745-EB92CD637B19}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{857043FC-2E93-4B8F-9DAD-F41BB100A7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -243,5 +246,9 @@ Global
 		{E45E360E-0514-453B-B64B-69D02EAAE59B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E45E360E-0514-453B-B64B-69D02EAAE59B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E45E360E-0514-453B-B64B-69D02EAAE59B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DA98071-C17D-43D2-855F-B893E75630A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA98071-C17D-43D2-855F-B893E75630A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DA98071-C17D-43D2-855F-B893E75630A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA98071-C17D-43D2-855F-B893E75630A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
